@@ -1,0 +1,14 @@
+
+:root {
+    --cor-de-fundo: hsl(0, 0%, 94%);
+    --branco: #FFF;
+    --roxo: hsl(259, 100%, 65%);
+    --vermelho: hsl(0, 100%, 67%);
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+body {
+    background-color: var(--cor-de-fundo);
+}
