@@ -9,7 +9,32 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                purple: '#854DFF',
+                red: '#FF5757'
+              },
+              neutral: {
+                white: '#FFFFFF',
+                offWhite: '#F0F0F0',
+                lightGrey: '#DBDBDB',
+                smokeyGrey: '#716F6F',
+                offBlack: '#141414'
+              }
+            },
+            fontFamily: {
+              poppins: ['Poppins', 'sans-serif']
+            }
+          }
+        }
+      }
+    </script>
     
     <title>Frontend Mentor | Age calculator</title>
   </head>
