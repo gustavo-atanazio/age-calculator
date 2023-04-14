@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,800&display=swap" rel="stylesheet">
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -39,25 +40,41 @@
     <title>Frontend Mentor | Age calculator</title>
   </head>
 
-  <body class="bg-neutral-offWhite h-screen">
+  <body class="bg-neutral-offWhite h-screen flex flex-col justify-center items-center">
 
-    <main>
-      <form class="flex flex-row p-10 bg-neutral-white gap-6 m-10">
+    <main class="bg-neutral-white rounded-2xl m-6 font-poppins">
+      <form class="flex flex-row justify-center items-center gap-6 m-10">
         <div class="flex flex-col">
-          <label for="dia">Dia</label>
-          <input class="w-2/3 border" type="number" id="dia" required>
+          <label class="text-neutral-smokeyGrey font-black" for="dia">DIA</label>
+          <input class="w-16 border h-10 rounded-lg p-3 font-black outline-0 focus:border-primary-purple focus:ring-1 focus:ring-primary-purple" type="number" id="dia" required>
         </div>
 
         <div class="flex flex-col">
-          <label for="mes">Mês</label>
-          <input class="w-2/3 border" type="number" id="mes" required>
+          <label class="text-neutral-smokeyGrey font-black" for="mes">MÊS</label>
+          <input class="w-16 border h-10 rounded-lg p-3 font-black outline-0 focus:border-primary-purple focus:ring-1 focus:ring-primary-purple" type="number" id="mes" required>
         </div>
 
         <div class="flex flex-col">
-          <label for="ano">Ano</label>
-          <input class="w-2/3 border" type="number" id="ano" required>
+          <label class="text-neutral-smokeyGrey font-black" for="ano">ANO</label>
+          <input class="w-16 border h-10 rounded-lg p-3 font-black outline-0 focus:border-primary-purple focus:ring-1 focus:ring-primary-purple" type="number" id="ano" required>
         </div>
       </form>
+      <div class="m-10 text-5xl/normal italic">
+        <div class="flex items-center gap-4">
+            <h1 class="text-primary-purple">0</h1>
+            <h1>anos</h1>
+        </div>
+
+        <div class="flex items-center gap-4">
+            <h1 class="text-primary-purple">0</h1>
+            <h1>meses</h1>
+        </div>
+
+        <div class="flex items-center gap-4">
+            <h1 class="text-primary-purple">0</h1>
+            <h1>dias</h1>
+        </div>
+      </div>
     </main>
 
     <footer>
