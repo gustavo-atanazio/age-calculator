@@ -51,7 +51,7 @@
 
     <main class="bg-neutral-white rounded-2xl m-6 font-poppins w-screen max-w-[80%]">
       <form class="flex flex-col justify-center items-center gap-6 m-10">
-        <div class="flex gap-6">
+        <div class="flex gap-6 md:self-start">
           <div class="flex flex-col">
             <label class="text-neutral-smokeyGrey font-black" for="dia">DIA</label>
             <input
@@ -74,10 +74,10 @@
           </div>
         </div>
 
-        <div class="flex flex-col items-center justify-center">
-          <div class="w-60 border fixed"></div>
+        <div class="flex flex-col items-center justify-center md:items-end md:w-full">
+          <div class="w-60 border fixed md:relative md:top-5 md:w-full"></div>
 
-          <button class="bg-primary-purple rounded-full flex p-2 z-[1] hover:bg-neutral-offBlack" type="submit">
+          <button class="bg-primary-purple rounded-full flex p-2 z-[1] hover:bg-neutral-offBlack md:mr-8" type="submit">
             <span class="material-symbols-outlined text-neutral-white">done</span>
           </button>
         </div>
