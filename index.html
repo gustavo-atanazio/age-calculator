@@ -37,7 +37,7 @@
               '1': '1'
             },
             maxWidth: {
-              '80%': '80%'
+              '60%': '60%'
             }
           }
         }
@@ -49,28 +49,40 @@
 
   <body class="bg-neutral-offWhite h-screen flex flex-col justify-center items-center">
 
-    <main class="bg-neutral-white rounded-2xl m-6 font-poppins w-screen max-w-[80%]">
+    <main class="bg-neutral-white rounded-2xl m-6 font-poppins md:max-w-[60%] drop-shadow-lg">
       <form class="flex flex-col justify-center items-center gap-6 m-10">
-        <div class="flex gap-6 md:self-start">
-          <div class="flex flex-col">
+        <div class="flex gap-4 w-full md:pr-10">
+          <div class="flex flex-col md:w-1/4">
             <label class="text-neutral-smokeyGrey font-black" for="dia">DIA</label>
             <input
-              class="w-16 border h-10 rounded-lg p-3 font-black outline-0 hover:border-primary-purple focus:border-primary-purple focus:ring-1 focus:ring-primary-purple"
-              type="number" id="dia" required>
+              class="w-16 border h-10 rounded-lg p-2 font-black outline-0 
+              hover:border-primary-purple 
+              focus:border-primary-purple focus:ring-1 focus:ring-primary-purple 
+              placeholder:text-neutral-smokeyGrey
+              md:w-3/4"
+              type="number" id="dia" placeholder="DD" required>
           </div>
 
-          <div class="flex flex-col">
+          <div class="flex flex-col md:w-1/4">
             <label class="text-neutral-smokeyGrey font-black" for="mes">MÊS</label>
             <input
-              class="w-16 border h-10 rounded-lg p-3 font-black outline-0 hover:border-primary-purple focus:border-primary-purple focus:ring-1 focus:ring-primary-purple"
-              type="number" id="mes" required>
+              class="w-16 border h-10 rounded-lg p-2 font-black outline-0 
+              hover:border-primary-purple 
+              focus:border-primary-purple focus:ring-1 focus:ring-primary-purple 
+              placeholder:text-neutral-smokeyGrey
+              md:w-3/4"
+              type="number" id="mes" placeholder="MM" required>
           </div>
 
-          <div class="flex flex-col">
+          <div class="flex flex-col md:w-1/4">
             <label class="text-neutral-smokeyGrey font-black" for="ano">ANO</label>
             <input
-              class="w-16 border h-10 rounded-lg p-3 font-black outline-0 hover:border-primary-purple focus:border-primary-purple focus:ring-1 focus:ring-primary-purple"
-              type="number" id="ano" required>
+              class="w-16 border h-10 rounded-lg p-2 font-black outline-0 
+              hover:border-primary-purple 
+              focus:border-primary-purple focus:ring-1 focus:ring-primary-purple 
+              placeholder:text-neutral-smokeyGrey
+              md:w-3/4"
+              type="number" id="ano" placeholder="AAAA" required>
           </div>
         </div>
 
@@ -83,28 +95,28 @@
         </div>
       </form>
 
-      <div class="m-10 text-5xl/normal italic">
+      <div class="m-10 text-5xl/normal italic md:pl-4">
         <div class="flex items-center gap-4">
           <h1 class="text-primary-purple">0</h1>
-          <h1>anos</h1>
+          <h1 class="text-neutral-offBlack">anos</h1>
         </div>
 
         <div class="flex items-center gap-4">
           <h1 class="text-primary-purple">0</h1>
-          <h1>meses</h1>
+          <h1 class="text-neutral-offBlack">meses</h1>
         </div>
 
         <div class="flex items-center gap-4">
           <h1 class="text-primary-purple">0</h1>
-          <h1>dias</h1>
+          <h1 class="text-neutral-offBlack">dias</h1>
         </div>
       </div>
     </main>
 
     <footer class="text-center m-6 font-medium">
       <div>
-        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" class="text-primary-purple">Frontend Mentor</a>.
-        Coded by <a href="#" class="text-primary-purple">Gustavo Atanazio</a>.
+        Elaborado por <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" class="text-primary-purple">Frontend Mentor</a>.
+        Feito por <a href="#" class="text-primary-purple">Gustavo Atanazio</a>.
       </div>
     </footer>
 
