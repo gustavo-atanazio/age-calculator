@@ -52,36 +52,36 @@
       <form class="flex flex-col justify-center items-center gap-6 m-10">
         <div class="flex gap-4 w-full md:pr-10">
           <div class="flex flex-col md:w-1/4">
-            <label class="text-neutral-smokeyGrey font-black" for="dia">DIA</label>
+            <label class="text-neutral-smokeyGrey font-black tracking-widest" for="dia">DIA</label>
             <input
-              class="w-16 border h-10 rounded-lg p-2 font-black outline-0 
+              class="w-16 border h-10 rounded-lg p-2 font-black outline-0 tracking-wider 
               hover:border-primary-purple 
               focus:border-primary-purple focus:ring-1 focus:ring-primary-purple 
               placeholder:text-neutral-smokeyGrey
               md:w-3/4"
-              type="number" id="dia" placeholder="DD" required>
+              id="dia" placeholder="DD" maxlength="2" required>
           </div>
 
           <div class="flex flex-col md:w-1/4">
-            <label class="text-neutral-smokeyGrey font-black" for="mes">MÊS</label>
+            <label class="text-neutral-smokeyGrey font-black tracking-widest" for="mes">MÊS</label>
             <input
-              class="w-16 border h-10 rounded-lg p-2 font-black outline-0 
+              class="w-16 border h-10 rounded-lg p-2 font-black outline-0 tracking-wider 
               hover:border-primary-purple 
               focus:border-primary-purple focus:ring-1 focus:ring-primary-purple 
               placeholder:text-neutral-smokeyGrey
               md:w-3/4"
-              type="number" id="mes" placeholder="MM" required>
+              id="mes" placeholder="MM" maxlength="2" required>
           </div>
 
           <div class="flex flex-col md:w-1/4">
-            <label class="text-neutral-smokeyGrey font-black" for="ano">ANO</label>
+            <label class="text-neutral-smokeyGrey font-black tracking-widest" for="ano">ANO</label>
             <input
-              class="w-16 border h-10 rounded-lg p-2 font-black outline-0 
+              class="w-16 border h-10 rounded-lg p-2 font-black outline-0 tracking-wider 
               hover:border-primary-purple 
               focus:border-primary-purple focus:ring-1 focus:ring-primary-purple 
               placeholder:text-neutral-smokeyGrey
               md:w-3/4"
-              type="number" id="ano" placeholder="AAAA" required>
+              id="ano" placeholder="AAAA" maxlength="4" required>
           </div>
         </div>
 
@@ -89,7 +89,7 @@
           <div class="w-60 border fixed md:relative md:top-6 md:w-full"></div>
 
           <button class="bg-primary-purple rounded-full flex p-2 z-[1] hover:bg-neutral-offBlack md:mr-8" type="submit">
-            <img src="./assets/images/icon-arrow.svg" class="h-8" alt="">
+            <img src="./assets/images/icon-arrow.svg" class="h-8" alt="Flecha">
           </button>
         </div>
       </form>
