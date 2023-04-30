@@ -1,14 +1,49 @@
 const form = document.querySelector("#form");
-const inputDia = document.querySelector("#dia");
-const inputMes = document.querySelector("#mes");
-const inputAno = document.querySelector("#ano");
+
+let diaInput = document.getElementById("dia");
+let mesInput = document.getElementById("mes");
+let anoInput = document.getElementById("ano");
 
 const dataAtual = new Date();
+let diaAtual = dataAtual.getDate();
+let mesAtual = dataAtual.getMonth() + 1;
+let anoAtual = dataAtual.getFullYear();
+
+const meses = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
 form.addEventListener("submit", (evento) => {
     evento.preventDefault();
 
-    const dia = Number(inputDia.value);
-    const mes = Number(inputMes.value);
-    const ano = Number(inputAno.value);
+    capturaValor();
+    calculaIdade();
 })
+
+function capturaValor() {
+    diaEntrada = diaInput.value;
+    mesEntrada = mesInput.value;
+    anoEntrada = anoInput.value;
+}
+
+function calculaIdade() {
+    if (diaEntrada > diaAtual) {
+        diaAtual = diaAtual + meses[mesAtual - 1];
+        mesAtual = mesAtual - 1;
+    }
+
+    if (mesEntrada > mesAtual) {
+        mesAtual = mesAtual + 12;
+        anoAtual = anoAtual - 1;
+    }
+
+    const diasDeIdade = diaAtual - diaEntrada;
+    const mesesDeIdade = mesAtual - mesEntrada;
+    const anosDeIdade = anoAtual - anoEntrada;
+
+    console.log(`Sua idade é: ${anosDeIdade} anos, ${mesesDeIdade} meses e ${diasDeIdade} dias`);
+}
+
+function exibeIdade() {
+    const diaH1 = document.getElementById("dia-h1");
+    const mesH1 = document.getElementById("mes-h1");
+    const anoH1 = document.getElementById("ano-h1");
+}
