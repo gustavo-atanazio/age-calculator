@@ -15,7 +15,8 @@ form.addEventListener("submit", (evento) => {
     evento.preventDefault();
 
     capturaValor();
-    calculaIdade();
+    const idade = calculaIdade();
+    exibeIdade(idade);
 })
 
 function capturaValor() {
@@ -35,15 +36,21 @@ function calculaIdade() {
         anoAtual = anoAtual - 1;
     }
 
-    const diasDeIdade = diaAtual - diaEntrada;
-    const mesesDeIdade = mesAtual - mesEntrada;
-    const anosDeIdade = anoAtual - anoEntrada;
+    const resultado = {
+        dias: diaAtual - diaEntrada,
+        meses: mesAtual - mesEntrada,
+        anos: anoAtual - anoEntrada
+    }
 
-    console.log(`Sua idade é: ${anosDeIdade} anos, ${mesesDeIdade} meses e ${diasDeIdade} dias`);
+    return resultado;
 }
 
-function exibeIdade() {
+function exibeIdade(idade) {
     const diaH1 = document.getElementById("dia-h1");
     const mesH1 = document.getElementById("mes-h1");
     const anoH1 = document.getElementById("ano-h1");
+
+    diaH1.innerText = idade.dias;
+    mesH1.innerText = idade.meses;
+    anoH1.innerText = idade.anos;
 }
