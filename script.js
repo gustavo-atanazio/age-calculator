@@ -57,6 +57,8 @@ function validaEntrada() {
 }
 
 function calculaIdade() {
+    verificaAnobissexto(anoAtual);
+
     if (diaEntrada > diaAtual) {
         diaAtual = diaAtual + meses[mesAtual - 1];
         mesAtual = mesAtual - 1;
@@ -84,4 +86,12 @@ function exibeIdade(idade) {
     diaH1.innerText = idade.dias;
     mesH1.innerText = idade.meses;
     anoH1.innerText = idade.anos;
+}
+
+function verificaAnobissexto(ano) {
+    if (ano % 4 == 0 || (ano % 100 == 0 && ano % 400 == 0)) {
+        meses[1] = 29
+    } else {
+        meses[1] = 28
+    }
 }
