@@ -42,7 +42,7 @@ function validaEntrada() {
             mesInput.classList.add("border-primary-red", "ring-1", "ring-primary-red");
             mesInput.parentElement.querySelector("small").innerText = "Precisa ser um mês válido";
             validator = false;
-        } else if (diaInput.value > 31) {
+        } else if (diaInput.value > 31 || diaInput.value > meses[mesEntrada - 1]) {
             diaInput.classList.add("border-primary-red", "ring-1", "ring-primary-red");
             diaInput.parentElement.querySelector("small").innerText = "Precisa ser um dia válido";
             validator = false;
