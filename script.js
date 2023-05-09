@@ -15,14 +15,45 @@ form.addEventListener("submit", (evento) => {
     evento.preventDefault();
 
     capturaValor();
-    const idade = calculaIdade();
-    exibeIdade(idade);
+    if (validaEntrada()) {
+        const idade = calculaIdade();
+        exibeIdade(idade);
+    }
 })
 
 function capturaValor() {
     diaEntrada = diaInput.value;
     mesEntrada = mesInput.value;
     anoEntrada = anoInput.value;
+}
+
+function validaEntrada() {
+    const inputs = document.querySelectorAll("input");
+    let validator = true;
+
+    inputs.forEach(i => {
+        const parent = i.parentElement;
+
+        if (!i.value) {
+            i.classList.add("border-primary-red", "ring-1", "ring-primary-red");
+            parent.querySelector("small").innerText = "Esse campo é obrigatório";
+            validator = false;
+        } else if (mesInput.value > 12) {
+            mesInput.classList.add("border-primary-red", "ring-1", "ring-primary-red");
+            mesInput.parentElement.querySelector("small").innerText = "Precisa ser um mês válido";
+            validator = false;
+        } else if (diaInput.value > 31) {
+            diaInput.classList.add("border-primary-red", "ring-1", "ring-primary-red");
+            diaInput.parentElement.querySelector("small").innerText = "Precisa ser um dia válido";
+            validator = false;
+        } else {
+            i.classList.remove("border-primary-red", "ring-1", "ring-primary-red");
+            parent.querySelector("small").innerText = "";
+            validator = true;
+        }
+    })
+
+    return validator;
 }
 
 function calculaIdade() {
