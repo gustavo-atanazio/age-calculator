@@ -2,7 +2,7 @@
 <p align='center'>Calcule sua idade de maneira rápida e fácil</p>
 
 <p align='center'>
-  <a href='age-calculator-kohl.vercel.app'>Clique aqui para testar</a>
+  <a href='https://age-calculator-kohl.vercel.app'>Clique aqui para testar</a>
 </p>
 
 <div align='center'>
