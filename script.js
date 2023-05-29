@@ -38,11 +38,11 @@ function validaEntrada() {
             i.classList.add("border-primary-red", "ring-1", "ring-primary-red");
             parent.querySelector("small").innerText = "Esse campo é obrigatório";
             validator = false;
-        } else if (mesInput.value > 12) {
+        } else if (mesInput.value > 12 || mesInput.value < 1) {
             mesInput.classList.add("border-primary-red", "ring-1", "ring-primary-red");
             mesInput.parentElement.querySelector("small").innerText = "Precisa ser um mês válido";
             validator = false;
-        } else if (diaInput.value > 31 || diaInput.value > meses[mesEntrada - 1]) {
+        } else if (diaInput.value > 31 || diaInput.value > meses[mesEntrada - 1] || diaInput.value < 1) {
             diaInput.classList.add("border-primary-red", "ring-1", "ring-primary-red");
             diaInput.parentElement.querySelector("small").innerText = "Precisa ser um dia válido";
             validator = false;
