@@ -6,7 +6,7 @@
 </p>
 
 <div align='center'>
-  <img src='https://github.com/gustavo-atanazio/age-calculator/assets/124182846/d36ceeff-dec2-47f1-b907-c65f2ca0cef4' width='700px'/>
+  <img src='https://github.com/gustavo-atanazio/age-calculator/assets/124182846/f746515f-2ddd-4d50-b482-15b475db7ded' width='700px'/>
 </div>
 
 ## 📘 Sobre o projeto
